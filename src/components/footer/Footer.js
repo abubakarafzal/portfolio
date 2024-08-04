@@ -14,7 +14,6 @@ export default function Footer() {
         </p>
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
           {emoji("Talent without working hard is nothing 💪")}
-
         </p>
       </div>
     </Fade>

@@ -44,7 +44,8 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "EXPERT SDET WITH A PASSION FOR TEST AUTOMATION AND QUALITY ASSURANCE",
+  subTitle:
+    "EXPERT SDET WITH A PASSION FOR TEST AUTOMATION AND QUALITY ASSURANCE",
   skills: [
     emoji(
       "⚡ Test Automation: Creating and maintaining automation frameworks using tools like Selenium, Appium, WebDriverIO, Cypress, Playwright."
@@ -58,7 +59,6 @@ const skillsSection = {
   ],
 
   softwareSkills: [
-
     {
       skillName: "python",
       fontAwesomeClassname: "fab fa-python"
@@ -153,45 +153,45 @@ const talkSection = {
     }
   ],
   badges: [
-    "<img src=\"https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white\" alt=\"CSS3\">",
-    "<img src=\"https://img.shields.io/badge/Appium-41BDF5.svg?&style=for-the-badge&logo=Appium&logoColor=white\" alt=\"Appium\">",
-    "<img src=\"https://img.shields.io/badge/HTML5-E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=white\" alt=\"HTML5\">",
-    "<img src=\"https://img.shields.io/badge/JavaScript-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=black\" alt=\"JavaScript\">",
-    "<img src=\"https://img.shields.io/badge/Firebase-FFCA28.svg?&style=for-the-badge&logo=Firebase&logoColor=black\" alt=\"Firebase\">",
-    "<img src=\"https://img.shields.io/badge/Gatsby-663399.svg?&style=for-the-badge&logo=Gatsby&logoColor=white\" alt=\"Gatsby\">",
-    "<img src=\"https://img.shields.io/badge/MySQL-4479A1.svg?&style=for-the-badge&logo=MySQL&logoColor=white\" alt=\"MySQL\">",
-    "<img src=\"https://img.shields.io/badge/Node.js-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white\" alt=\"NodeJS\">",
-    "<img src=\"https://img.shields.io/badge/AWS-232F3E.svg?&style=for-the-badge&logo=Amazon-AWS&logoColor=white\" alt=\"AWS\">",
-    "<img src=\"https://img.shields.io/badge/Postman-FF6C37.svg?&style=for-the-badge&logo=Postman&logoColor=white\" alt=\"Postman\">",
-    "<img src=\"https://img.shields.io/badge/WebDriverIO-EA5906.svg?&style=for-the-badge&logo=WebdriverIO&logoColor=white\" alt=\"WebDriverIO\">",
-    "<img src=\"https://img.shields.io/badge/TypeScript-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=black\" alt=\"TypeScript\">",
-    "<img src=\"https://img.shields.io/badge/JavaScript-F0DB4F.svg?&style=for-the-badge&logo=JavaScript&logoColor=black\" alt=\"JavaScript\">",
-    "<img src=\"https://img.shields.io/badge/Docker-0db7ed.svg?&style=for-the-badge&logo=Docker&logoColor=white\" alt=\"Docker\">",
-    "<img src=\"https://img.shields.io/badge/Mocha-8D6748.svg?&style=for-the-badge&logo=Mocha&logoColor=white\" alt=\"Mocha\">",
-    "<img src=\"https://img.shields.io/badge/Cucumber-23D96C.svg?&style=for-the-badge&logo=Cucumber&logoColor=white\" alt=\"Cucumber\">",
-    "<img src=\"https://img.shields.io/badge/Selenium-43B02A.svg?&style=for-the-badge&logo=Selenium&logoColor=white\" alt=\"Selenium\">",
-    "<img src=\"https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white\" alt=\"Java\">",
-    "<img src=\"https://img.shields.io/badge/Rest%20Assured-4BA82E.svg?&style=for-the-badge&logo=Java&logoColor=white\" alt=\"Rest-Assured\">",
-    "<img src=\"https://img.shields.io/badge/Postman-FF6C37.svg?&style=for-the-badge&logo=Postman&logoColor=white\" alt=\"Postman\">",
-    "<img src=\"https://img.shields.io/badge/Apache%20Maven-C71A36.svg?&style=for-the-badge&logo=Apache-Maven&logoColor=white\" alt=\"Apache Maven\">",
-    "<img src=\"https://img.shields.io/badge/Git-F05032.svg?&style=for-the-badge&logo=Git&logoColor=white\" alt=\"Git\">",
-    "<img src=\"https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white\" alt=\"GitHub\">",
-    "<img src=\"https://img.shields.io/badge/GitHub%20Actions-181717.svg?&style=for-the-badge&logo=GitHub-Actions&logoColor=white\" alt=\"GitHub-Actions\">",
-    "<img src=\"https://img.shields.io/badge/Jenkins-D24939.svg?&style=for-the-badge&logo=Jenkins&logoColor=white\" alt=\"Jenkins\">",
-    "<img src=\"https://img.shields.io/badge/Cypress-17202C.svg?&style=for-the-badge&logo=Cypress&logoColor=white\" alt=\"Cypress\">",
-    "<img src=\"https://img.shields.io/badge/Node.js-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white\" alt=\"NodeJS\">",
-    "<img src=\"https://img.shields.io/badge/Apache%20JMeter-D22128.svg?&style=for-the-badge&logo=Apache-JMeter&logoColor=white\" alt=\"JMeter\">",
-    "<img src=\"https://img.shields.io/badge/Playwright-2EAD33.svg?&style=for-the-badge&logo=Playwright&logoColor=white\" alt=\"Playwright\">",
-    "<img src=\"https://img.shields.io/badge/Pytest-0A9EDC.svg?&style=for-the-badge&logo=Pytest&logoColor=white\" alt=\"Pytest\">",
-    "<img src=\"https://img.shields.io/badge/Testing%20Library-E33332.svg?&style=for-the-badge&logo=Testing-Library&logoColor=white\" alt=\"Testing Library\">",
-    "<img src=\"https://img.shields.io/badge/CircleCI-343434.svg?&style=for-the-badge&logo=CircleCI&logoColor=white\" alt=\"CircleCI\">",
-    "<img src=\"https://img.shields.io/badge/Gradle-02303A.svg?&style=for-the-badge&logo=Gradle&logoColor=white\" alt=\"Gradle\">",
-    "<img src=\"https://img.shields.io/badge/Android-3DDC84.svg?&style=for-the-badge&logo=Android&logoColor=white\" alt=\"Android\">",
-    "<img src=\"https://img.shields.io/badge/iOS-000000.svg?&style=for-the-badge&logo=iOS&logoColor=white\" alt=\"iOS\">",
-    "<img src=\"https://img.shields.io/badge/Cucumber-23D96C.svg?&style=for-the-badge&logo=Cucumber&logoColor=white\" alt=\"Cucumber\">",
-    "<img src=\"https://img.shields.io/badge/Robot%20Framework-000000.svg?&style=for-the-badge&logo=Robot-Framework&logoColor=white\" alt=\"Robot Framework\">",
-    "<img src=\"https://img.shields.io/badge/Chai.js-F7E018.svg?&style=for-the-badge&logo=Chai&logoColor=black\" alt=\"Chai.js\">",
-    "<img src=\"https://img.shields.io/badge/DevOps-007ACC.svg?&style=for-the-badge&logo=DevOps&logoColor=white\" alt=\"DevOps\">"
+    '<img src="https://img.shields.io/badge/CSS3-1572B6.svg?&style=for-the-badge&logo=CSS3&logoColor=white" alt="CSS3">',
+    '<img src="https://img.shields.io/badge/Appium-41BDF5.svg?&style=for-the-badge&logo=Appium&logoColor=white" alt="Appium">',
+    '<img src="https://img.shields.io/badge/HTML5-E34F26.svg?&style=for-the-badge&logo=HTML5&logoColor=white" alt="HTML5">',
+    '<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?&style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">',
+    '<img src="https://img.shields.io/badge/Firebase-FFCA28.svg?&style=for-the-badge&logo=Firebase&logoColor=black" alt="Firebase">',
+    '<img src="https://img.shields.io/badge/Gatsby-663399.svg?&style=for-the-badge&logo=Gatsby&logoColor=white" alt="Gatsby">',
+    '<img src="https://img.shields.io/badge/MySQL-4479A1.svg?&style=for-the-badge&logo=MySQL&logoColor=white" alt="MySQL">',
+    '<img src="https://img.shields.io/badge/Node.js-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS">',
+    '<img src="https://img.shields.io/badge/AWS-232F3E.svg?&style=for-the-badge&logo=Amazon-AWS&logoColor=white" alt="AWS">',
+    '<img src="https://img.shields.io/badge/Postman-FF6C37.svg?&style=for-the-badge&logo=Postman&logoColor=white" alt="Postman">',
+    '<img src="https://img.shields.io/badge/WebDriverIO-EA5906.svg?&style=for-the-badge&logo=WebdriverIO&logoColor=white" alt="WebDriverIO">',
+    '<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?&style=for-the-badge&logo=TypeScript&logoColor=black" alt="TypeScript">',
+    '<img src="https://img.shields.io/badge/JavaScript-F0DB4F.svg?&style=for-the-badge&logo=JavaScript&logoColor=black" alt="JavaScript">',
+    '<img src="https://img.shields.io/badge/Docker-0db7ed.svg?&style=for-the-badge&logo=Docker&logoColor=white" alt="Docker">',
+    '<img src="https://img.shields.io/badge/Mocha-8D6748.svg?&style=for-the-badge&logo=Mocha&logoColor=white" alt="Mocha">',
+    '<img src="https://img.shields.io/badge/Cucumber-23D96C.svg?&style=for-the-badge&logo=Cucumber&logoColor=white" alt="Cucumber">',
+    '<img src="https://img.shields.io/badge/Selenium-43B02A.svg?&style=for-the-badge&logo=Selenium&logoColor=white" alt="Selenium">',
+    '<img src="https://img.shields.io/badge/Java-007396.svg?&style=for-the-badge&logo=Java&logoColor=white" alt="Java">',
+    '<img src="https://img.shields.io/badge/Rest%20Assured-4BA82E.svg?&style=for-the-badge&logo=Java&logoColor=white" alt="Rest-Assured">',
+    '<img src="https://img.shields.io/badge/Postman-FF6C37.svg?&style=for-the-badge&logo=Postman&logoColor=white" alt="Postman">',
+    '<img src="https://img.shields.io/badge/Apache%20Maven-C71A36.svg?&style=for-the-badge&logo=Apache-Maven&logoColor=white" alt="Apache Maven">',
+    '<img src="https://img.shields.io/badge/Git-F05032.svg?&style=for-the-badge&logo=Git&logoColor=white" alt="Git">',
+    '<img src="https://img.shields.io/badge/GitHub-181717.svg?&style=for-the-badge&logo=GitHub&logoColor=white" alt="GitHub">',
+    '<img src="https://img.shields.io/badge/GitHub%20Actions-181717.svg?&style=for-the-badge&logo=GitHub-Actions&logoColor=white" alt="GitHub-Actions">',
+    '<img src="https://img.shields.io/badge/Jenkins-D24939.svg?&style=for-the-badge&logo=Jenkins&logoColor=white" alt="Jenkins">',
+    '<img src="https://img.shields.io/badge/Cypress-17202C.svg?&style=for-the-badge&logo=Cypress&logoColor=white" alt="Cypress">',
+    '<img src="https://img.shields.io/badge/Node.js-339933.svg?&style=for-the-badge&logo=Node.js&logoColor=white" alt="NodeJS">',
+    '<img src="https://img.shields.io/badge/Apache%20JMeter-D22128.svg?&style=for-the-badge&logo=Apache-JMeter&logoColor=white" alt="JMeter">',
+    '<img src="https://img.shields.io/badge/Playwright-2EAD33.svg?&style=for-the-badge&logo=Playwright&logoColor=white" alt="Playwright">',
+    '<img src="https://img.shields.io/badge/Pytest-0A9EDC.svg?&style=for-the-badge&logo=Pytest&logoColor=white" alt="Pytest">',
+    '<img src="https://img.shields.io/badge/Testing%20Library-E33332.svg?&style=for-the-badge&logo=Testing-Library&logoColor=white" alt="Testing Library">',
+    '<img src="https://img.shields.io/badge/CircleCI-343434.svg?&style=for-the-badge&logo=CircleCI&logoColor=white" alt="CircleCI">',
+    '<img src="https://img.shields.io/badge/Gradle-02303A.svg?&style=for-the-badge&logo=Gradle&logoColor=white" alt="Gradle">',
+    '<img src="https://img.shields.io/badge/Android-3DDC84.svg?&style=for-the-badge&logo=Android&logoColor=white" alt="Android">',
+    '<img src="https://img.shields.io/badge/iOS-000000.svg?&style=for-the-badge&logo=iOS&logoColor=white" alt="iOS">',
+    '<img src="https://img.shields.io/badge/Cucumber-23D96C.svg?&style=for-the-badge&logo=Cucumber&logoColor=white" alt="Cucumber">',
+    '<img src="https://img.shields.io/badge/Robot%20Framework-000000.svg?&style=for-the-badge&logo=Robot-Framework&logoColor=white" alt="Robot Framework">',
+    '<img src="https://img.shields.io/badge/Chai.js-F7E018.svg?&style=for-the-badge&logo=Chai&logoColor=black" alt="Chai.js">',
+    '<img src="https://img.shields.io/badge/DevOps-007ACC.svg?&style=for-the-badge&logo=DevOps&logoColor=white" alt="DevOps">'
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -247,7 +247,7 @@ const workExperiences = {
       companylogo: require("./assets/images/Untitled-design-35.png"),
       date: "Dec 2014 – Dec 2015",
       desc: "Conducted automation testing and improved testing processes."
-    },
+    }
   ]
 };
 
@@ -280,7 +280,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "BuggyOnched",
-      projectDesc: "Developed automation scripts and monitored application performance.",
+      projectDesc:
+        "Developed automation scripts and monitored application performance.",
       footerLink: [
         {
           name: "Visit Website",
@@ -294,7 +295,6 @@ const bigProjects = {
 
 // Achievement Section
 // Include certificates, talks etc
-
 
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
@@ -356,16 +356,17 @@ const achievementSection = {
       image: require("./assets/images/istqbLogo.webp"), // Make sure to have this image in the specified path
       imageAlt: "ISTQB Certification Logo",
       footerLink: [
-        { name: "Certification", url: "https://linkedin.com/" } // Update with actual certification URL if available
+        {name: "Certification", url: "https://linkedin.com/"} // Update with actual certification URL if available
       ]
     },
     {
       title: "Selenium Certification",
-      subtitle: "Certified skills in Selenium for test automation of web applications.",
+      subtitle:
+        "Certified skills in Selenium for test automation of web applications.",
       image: require("./assets/images/Selenium_Logo.png"), // Ensure the logo image file exists at this path
       imageAlt: "Selenium Logo",
       footerLink: [
-        { name: "Certification", url: "" } // Provide the link if available
+        {name: "Certification", url: ""} // Provide the link if available
       ]
     },
     {
@@ -374,10 +375,9 @@ const achievementSection = {
       image: require("./assets/images/appium.png"), // Ensure the logo image file exists at this path
       imageAlt: "Appium Logo",
       footerLink: [
-        { name: "Certification", url: "" } // Provide the link if available
+        {name: "Certification", url: ""} // Provide the link if available
       ]
     }
-
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -406,9 +406,7 @@ const blogSection = {
   display: false // Set false to hide this section, defaults to true
 };
 
-
 // Podcast Section
-
 
 // Resume Section
 const resumeSection = {

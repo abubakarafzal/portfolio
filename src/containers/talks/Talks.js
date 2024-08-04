@@ -9,10 +9,9 @@ export default function Talks() {
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="talks">
-
         <div className="badges">
           {talkSection.badges.map((badge, index) => (
-            <div key={index} dangerouslySetInnerHTML={{ __html: badge }} />
+            <div key={index} dangerouslySetInnerHTML={{__html: badge}} />
           ))}
         </div>
       </div>

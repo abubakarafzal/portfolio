@@ -16,6 +16,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: Set Execute Permission for load_env.sh
+        run: chmod +x ./load_env.sh
+
       - name: Load Environment Variables from .env
         run: ./load_env.sh
 

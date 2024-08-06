@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - gh-pages
+      - master
   schedule:
     - cron: "0 12 * * 1" # see https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events
 jobs:
@@ -36,8 +36,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
-          BRANCH: gh-pages # Ensure this is the branch you want to deploy to.
+          GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }} # This is provided by GitHub.
+          BRANCH: gh-pages # The branch the action should deploy to.
           FOLDER: build # The folder the action should deploy.
-          CLEAN: true # Optional: Cleans the deployment folder.
-          CLEAN_EXCLUDE: '["CNAME", ".nojekyll"]'

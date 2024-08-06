@@ -16,10 +16,8 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Load .env
-        uses: xom9ikk/dotenv-action@v2.1.1
-        with:
-          path: '.env'
+      - name: Load Environment Variables from .env
+        run: ./load_env.sh
 
       - name: Setup Node.js 🔧
         uses: actions/setup-node@v3.8.1

@@ -23,7 +23,7 @@ const greeting = {
   username: "Abu Bakr Afzal",
   title: "Hi all, I'm Abu Bakr",
   subTitle: emoji(
-    "I'm a dedicated Software Development Engineer in Test (SDET) with a strong commitment to ensuring the quality and reliability of software products. With 7 years of experience in the software testing and test automation field, I'm your go-to expert for crafting robust testing solutions."
+    "I'm a dedicated Software Development Engineer in Test (SDET) with a strong commitment to ensuring the quality and reliability of software products. With 8 plus years of experience in the software testing and test automation field, I'm your go-to expert for crafting robust testing solutions."
   ),
   resumeLink:
     "https://app.enhancv.com/share/660a8a38/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic", // Update with your actual resume link if needed

@@ -33,7 +33,7 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/abubakrafzal",
+  github: "https://github.com/abubakarafzal",
   linkedin: "https://www.linkedin.com/in/abubakrafzal",
   gmail: "bakrshk@gmail.com",
   // Add other social media links if needed

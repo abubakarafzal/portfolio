@@ -34,7 +34,7 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/abubakarafzal",
-  linkedin: "https://www.linkedin.com/in/abubakrafzal",
+  linkedin: "https://www.linkedin.com/in/bakrshk",
   gmail: "bakrshk@gmail.com",
   // Add other social media links if needed
   display: true // Set true to display this section, defaults to false

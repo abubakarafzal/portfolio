@@ -204,7 +204,7 @@ const workExperiences = {
       role: "SDET - SDE L5",
       company: "Amazon",
       companylogo: require("./assets/images/amazon.png"), // You may want to add Amazon logo
-      date: "Present",
+      date: "Jan 2024 – Present",
       desc: "Test Automation Development - Design and implement robust test automation frameworks for backend services, APIs, and user-facing applications.",
       descBullets: [
         "Develop scalable, maintainable, and reusable automated test suites to validate functionality, performance, and security.",
@@ -216,7 +216,7 @@ const workExperiences = {
       role: "Senior Software Development Engineer In Test",
       company: "Abraxas Informatik AG",
       companylogo: require("./assets/images/abraxas.png"), // You may want to add Abraxas logo
-      date: "June 2022 – Present",
+      date: "June 2022 – Jan 2024",
       desc: "Developed and implemented automated tests using Playwright, Cypress, Selenium, and Appium, achieving 98% software compliance with industry standards.",
       descBullets: [
         "Partnered with software developers and UI/UX designers, resulting in a 20% reduction in post-release bugs.",
@@ -272,6 +272,19 @@ const bigProjects = {
   subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
   projects: [
     {
+      image: require("./assets/images/Alexa.png"),
+      projectName: "Alexa / Alexa AI",
+      projectDesc:
+        "Voice skill testing, NLP pipeline validation, intent classification tests, conversational UX testing using Python, AWS Lambda, Alexa Skills Kit, Natural Language Processing, Voice User Interface testing, Dialog Flow validation.",
+      footerLink: [
+        {
+          name: "Amazon Alexa AI",
+          url: "https://developer.amazon.com/en-US/alexa"
+        }
+        //  you can add extra buttons here.
+      ]
+    },
+    {
       image: require("./assets/images/Siemens_Healthineers_logo.svg.png"),
       projectName: "Siemens Healthineers",
       projectDesc:
@@ -285,7 +298,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/Untitled-design-35.png"),
+      image: require("./assets/images/witty.png"),
       projectName: "Witty",
       projectDesc:
         "Fintech domain project using PlayWright, TypeScript, Mocha, Allure Report, Github Page, Github CI, Slack Report, Docker, Xray.",
@@ -297,50 +310,50 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/Untitled-design-35.png"),
+      image: require("./assets/images/vertical-bridge-logo.png"),
       projectName: "Vertical Bridge",
       projectDesc:
         "Telecom, Gen AI Modeling Domain using Python, Appium, Selenium, Bitbucket CI, Perfecto.",
       footerLink: [
         {
-          name: "Project Link",
-          url: "#"
+          name: "Visit Website",
+          url: "https://www.verticalbridge.com/"
         }
       ]
     },
     {
-      image: require("./assets/images/Untitled-design-35.png"),
-      projectName: "YoureFolio",
+      image: require("./assets/images/Zact_Logo.png"),
+      projectName: "Zact",
       projectDesc:
-        "Real Estate project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",
+        "Real Estate And Expense Management project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",
       footerLink: [
         {
-          name: "Project Link",
-          url: "#"
+          name: "Visit Website",
+          url: "https://www.zact.com/"
         }
       ]
     },
     {
-      image: require("./assets/images/Untitled-design-35.png"),
+      image: require("./assets/images/elgrocer.png"),
       projectName: "Elgrocer",
       projectDesc:
         "Ecommerce project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
       footerLink: [
         {
-          name: "Project Link",
-          url: "#"
+          name: "Visit Website",
+          url: "https://www.elgrocer.com/"
         }
       ]
     },
     {
-      image: require("./assets/images/Untitled-design-35.png"),
+      image: require("./assets/images/cuddleclone.png"),
       projectName: "CuddleClone",
       projectDesc:
         "Logistic Retail Finance project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
       footerLink: [
         {
-          name: "Project Link",
-          url: "#"
+          name: "Visit Website",
+          url: "https://www.cuddleclone.com/"
         }
       ]
     }

@@ -20,10 +20,10 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Abu Bakr Afzal",
-  title: "Hi all, I'm Abu Bakr",
+  username: "A.bakar Afzal",
+  title: "Hi all, I'm A.bakar",
   subTitle: emoji(
-    "I'm a dedicated Software Development Engineer in Test (SDET) with a strong commitment to ensuring the quality and reliability of software products. With 8 plus years of experience in the software testing and test automation field, I'm your go-to expert for crafting robust testing solutions."
+    "I'm an experienced QA Automation Engineer with over 8 years of expertise in automation testing, test script development, and continuous integration. Currently working at Amazon as SDET - SDE L5, I'm passionate about ensuring software compliance, reducing post-release defects, and optimizing deployment pipeline efficiency."
   ),
   resumeLink:
     "https://app.enhancv.com/share/660a8a38/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic", // Update with your actual resume link if needed
@@ -34,8 +34,8 @@ const greeting = {
 
 const socialMediaLinks = {
   github: "https://github.com/abubakarafzal",
-  linkedin: "https://www.linkedin.com/in/bakrshk",
-  gmail: "bakrshk@gmail.com",
+  linkedin: "https://www.linkedin.com/in/aymen-bakar",
+  gmail: "mnbakar.7@gmail.com",
   // Add other social media links if needed
   display: true // Set true to display this section, defaults to false
 };
@@ -45,13 +45,13 @@ const socialMediaLinks = {
 const skillsSection = {
   title: "What I do",
   subTitle:
-    "EXPERT SDET WITH A PASSION FOR TEST AUTOMATION AND QUALITY ASSURANCE",
+    "EXPERIENCED QA AUTOMATION ENGINEER WITH EXPERTISE IN TEST AUTOMATION AND QUALITY ASSURANCE",
   skills: [
     emoji(
       "⚡ Test Automation: Creating and maintaining automation frameworks using tools like Selenium, Appium, WebDriverIO, Cypress, Playwright."
     ),
     emoji(
-      "⚡ Test Strategy: Designing comprehensive test plans and strategies to ensure thorough test coverage."
+      "⚡ CI/CD Integration: Streamlining deployment pipelines by integrating automation scripts, enhancing software release efficiency."
     ),
     emoji(
       "⚡ Cross-Platform Testing: Ensuring software functions seamlessly across various platforms and devices."
@@ -72,8 +72,8 @@ const skillsSection = {
       fontAwesomeClassname: "fab fa-js"
     },
     {
-      skillName: "SQL",
-      fontAwesomeClassname: "fas fa-database"
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fab fa-js"
     },
     {
       skillName: "docker",
@@ -91,9 +91,9 @@ const educationInfo = {
     {
       schoolName: "University of Management and Technology - UMT",
       logo: require("./assets/images/umtLogo.png"),
-      subHeader: "Bachelor of Science in Computer Software Engineering",
+      subHeader: "Bachelor of Science in Software Engineering",
       duration: "January 2012 - February 2016",
-      desc: "Studied various aspects of computer software engineering.",
+      desc: "Studied various aspects of software engineering.",
       descBullets: [
         "Developed a strong foundation in software engineering principles.",
         "Gained experience in software development and testing."
@@ -125,15 +125,15 @@ const techStack = {
   experience: [
     {
       Stack: "Web Automation", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "95%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Mobile Automation",
-      progressPercentage: "85%"
+      progressPercentage: "90%"
     },
     {
       Stack: "API Automation",
-      progressPercentage: "80%"
+      progressPercentage: "85%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section, defaults to false
@@ -201,44 +201,50 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Senior Software Development Engineer In Test",
-      company: "Capgemini Engineering",
-      companylogo: require("./assets/images/Capgemini-Emblem.png"),
-      date: "June 2022 – Present",
-      desc: "Develop and maintain automated test scripts and frameworks for UI, API, and performance testing.",
+      role: "SDET - SDE L5",
+      company: "Amazon",
+      companylogo: require("./assets/images/amazon.png"), // You may want to add Amazon logo
+      date: "Present",
+      desc: "Test Automation Development - Design and implement robust test automation frameworks for backend services, APIs, and user-facing applications.",
       descBullets: [
-        "Integrate automated tests into CI/CD pipelines.",
-        "Conduct load and performance testing.",
-        "Collaborate with cross-functional teams to identify and prioritize defects."
+        "Develop scalable, maintainable, and reusable automated test suites to validate functionality, performance, and security.",
+        "Integrate automated tests into CI/CD pipelines to ensure fast, reliable deployments.",
+        "Write high-quality, production-level code in languages such as Java, Python, C++, JS/TS to build testing tools, harnesses, and utilities."
+      ]
+    },
+    {
+      role: "Senior Software Development Engineer In Test",
+      company: "Abraxas Informatik AG",
+      companylogo: require("./assets/images/abraxas.png"), // You may want to add Abraxas logo
+      date: "June 2022 – Present",
+      desc: "Developed and implemented automated tests using Playwright, Cypress, Selenium, and Appium, achieving 98% software compliance with industry standards.",
+      descBullets: [
+        "Partnered with software developers and UI/UX designers, resulting in a 20% reduction in post-release bugs.",
+        "Streamlined the CI/CD pipeline by integrating automation scripts, enhancing software release efficiency by 30%.",
+        "Led a team of automation testers, evaluated and improved the testing framework, increasing speed and accuracy by 15%."
       ]
     },
     {
       role: "Software Engineer in Test | QA Automation Lead",
-      company: "Kualitatem PVT Limited.",
-      companylogo: require("./assets/images/kualitatemLogo.png"),
+      company: "Pointivo",
+      companylogo: require("./assets/images/pv3.png"),
       date: "Jan 2019 – May 2022",
-      desc: "Developed and maintained automation scripts and frameworks for testing."
+      desc: "Utilized TypeScript with WebDriverIO/Mocha and JavaScript with Cypress/Mocha for diverse client projects, significantly improving automation efficiency and software quality.",
+      descBullets: [
+        "Created a comprehensive framework that increased team efficiency by 15%.",
+        "Executed manual tests for native, web, and mobile apps, ensuring high product quality and adherence to UX/UI standards.",
+        "Mentored junior QA members, improving team productivity by 20%."
+      ]
     },
     {
       role: "Senior Quality Assurance Automation Engineer",
-      company: "Siemens",
-      companylogo: require("./assets/images/Siemens.png"),
-      date: "Oct 2017 – Dec 2018",
+      company: "Kualitatem",
+      companylogo: require("./assets/images/kualitatemLogo.png"),
+      date: "Nov 2015 – Dec 2018",
       desc: "Coordinated the automation department and implemented successful CI strategies.",
       descBullets: [
         "Analyzed business requirements and software specifications.",
         "Created and optimized test documentation."
-      ]
-    },
-    {
-      role: "Software QA Automation Engineer",
-      company: "elGrocer",
-      companylogo: require("./assets/images/elgrocer.png"),
-      date: "Jan 2016 – Sep 2017",
-      desc: "Developed frameworks using Selenium and CI/CD techniques.",
-      descBullets: [
-        "Managed projects and achieved scheduled goals.",
-        "Automated websites and monitored application concepts."
       ]
     },
     {
@@ -267,8 +273,8 @@ const bigProjects = {
   projects: [
     {
       image: require("./assets/images/Siemens_Healthineers_logo.svg.png"),
-      projectName: "Healthineers",
-      projectDesc: "Automated and developed features for Fleetio application.",
+      projectName: "Siemens Healthineers",
+      projectDesc: "Medical & Health domain project using Cypress, JavaScript, Cucumber, CircleCI, LightHouse, VMware.",
       footerLink: [
         {
           name: "Visit Website",
@@ -279,13 +285,56 @@ const bigProjects = {
     },
     {
       image: require("./assets/images/Untitled-design-35.png"),
-      projectName: "BuggyOnched",
-      projectDesc:
-        "Developed automation scripts and monitored application performance.",
+      projectName: "Witty",
+      projectDesc: "Fintech domain project using PlayWright, TypeScript, Mocha, Allure Report, Github Page, Github CI, Slack Report, Docker, Xray.",
       footerLink: [
         {
           name: "Visit Website",
-          url: "https://www.buggyonched.com/"
+          url: "https://www.w1tty.com/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/Untitled-design-35.png"),
+      projectName: "Vertical Bridge",
+      projectDesc: "Telecom, Gen AI Modeling Domain using Python, Appium, Selenium, Bitbucket CI, Perfecto.",
+      footerLink: [
+        {
+          name: "Project Link",
+          url: "#"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/Untitled-design-35.png"),
+      projectName: "YoureFolio",
+      projectDesc: "Real Estate project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",
+      footerLink: [
+        {
+          name: "Project Link",
+          url: "#"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/Untitled-design-35.png"),
+      projectName: "Elgrocer",
+      projectDesc: "Ecommerce project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
+      footerLink: [
+        {
+          name: "Project Link",
+          url: "#"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/Untitled-design-35.png"),
+      projectName: "CuddleClone",
+      projectDesc: "Logistic Retail Finance project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
+      footerLink: [
+        {
+          name: "Project Link",
+          url: "#"
         }
       ]
     }
@@ -302,41 +351,15 @@ const achievementSection = {
     "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
 
   achievementsCards: [
-    // {
-    //   title: "Google Code-In Finalist",
-    //   subtitle:
-    //     "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-    //   image: require("./assets/images/codeInLogo.webp"),
-    //   imageAlt: "Google Code-In Logo",
-    //   footerLink: [
-    //     {
-    //       name: "Certification",
-    //       url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-    //     },
-    //     {
-    //       name: "Award Letter",
-    //       url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-    //     },
-    //     {
-    //       name: "Google Code-in Blog",
-    //       url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-    //     }
-    //   ]
-    // },
-    // {
-    //   title: "Google Assistant Action",
-    //   subtitle:
-    //     "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-    //   image: require("./assets/images/googleAssistantLogo.webp"),
-    //   imageAlt: "Google Assistant Action Logo",
-    //   footerLink: [
-    //     {
-    //       name: "View Google Assistant Action",
-    //       url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-    //     }
-    //   ]
-    // },
-
+    {
+      title: "ISTQB® Certified",
+      subtitle: "ISTQB® - International Software Testing Qualifications Board",
+      image: require("./assets/images/istqbLogo.webp"),
+      imageAlt: "ISTQB Certification Logo",
+      footerLink: [
+        {name: "Certification", url: "https://linkedin.com/"} // Update with actual certification URL if available
+      ]
+    },
     {
       title: "PWA Web App Automation Certification",
       subtitle: "Completed Certifcation from SMIT for PWA Web App Automation",
@@ -351,19 +374,10 @@ const achievementSection = {
       ]
     },
     {
-      title: "ISTQB Foundation Certification",
-      subtitle: "Certified foundation level skills in software testing.",
-      image: require("./assets/images/istqbLogo.webp"), // Make sure to have this image in the specified path
-      imageAlt: "ISTQB Certification Logo",
-      footerLink: [
-        {name: "Certification", url: "https://linkedin.com/"} // Update with actual certification URL if available
-      ]
-    },
-    {
       title: "Selenium Certification",
       subtitle:
         "Certified skills in Selenium for test automation of web applications.",
-      image: require("./assets/images/Selenium_Logo.png"), // Ensure the logo image file exists at this path
+      image: require("./assets/images/Selenium_Logo.png"),
       imageAlt: "Selenium Logo",
       footerLink: [
         {name: "Certification", url: ""} // Provide the link if available
@@ -372,7 +386,7 @@ const achievementSection = {
     {
       title: "Appium Certification",
       subtitle: "Certified expertise in Appium for mobile application testing.",
-      image: require("./assets/images/appium.png"), // Ensure the logo image file exists at this path
+      image: require("./assets/images/appium.png"),
       imageAlt: "Appium Logo",
       footerLink: [
         {name: "Certification", url: ""} // Provide the link if available
@@ -421,8 +435,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+351-927-443-477",
-  email_address: "abubakarsdet777@gmail.com"
+  number: "+351 927 443 477",
+  email_address: "mnbakar.7@gmail.com"
 };
 
 // Twitter Section

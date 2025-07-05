@@ -322,7 +322,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/Zact_Logo.png"),
+      image: require("./assets/images/Zact_Logo.jpg"),
       projectName: "Zact",
       projectDesc:
         "Real Estate And Expense Management project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",

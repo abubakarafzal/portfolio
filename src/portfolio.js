@@ -274,7 +274,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Siemens_Healthineers_logo.svg.png"),
       projectName: "Siemens Healthineers",
-      projectDesc: "Medical & Health domain project using Cypress, JavaScript, Cucumber, CircleCI, LightHouse, VMware.",
+      projectDesc:
+        "Medical & Health domain project using Cypress, JavaScript, Cucumber, CircleCI, LightHouse, VMware.",
       footerLink: [
         {
           name: "Visit Website",
@@ -286,7 +287,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "Witty",
-      projectDesc: "Fintech domain project using PlayWright, TypeScript, Mocha, Allure Report, Github Page, Github CI, Slack Report, Docker, Xray.",
+      projectDesc:
+        "Fintech domain project using PlayWright, TypeScript, Mocha, Allure Report, Github Page, Github CI, Slack Report, Docker, Xray.",
       footerLink: [
         {
           name: "Visit Website",
@@ -297,7 +299,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "Vertical Bridge",
-      projectDesc: "Telecom, Gen AI Modeling Domain using Python, Appium, Selenium, Bitbucket CI, Perfecto.",
+      projectDesc:
+        "Telecom, Gen AI Modeling Domain using Python, Appium, Selenium, Bitbucket CI, Perfecto.",
       footerLink: [
         {
           name: "Project Link",
@@ -308,7 +311,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "YoureFolio",
-      projectDesc: "Real Estate project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",
+      projectDesc:
+        "Real Estate project using WebdriverIO, TypeScript, Mocha, Appium, SuperTest API, Postman.",
       footerLink: [
         {
           name: "Project Link",
@@ -319,7 +323,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "Elgrocer",
-      projectDesc: "Ecommerce project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
+      projectDesc:
+        "Ecommerce project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
       footerLink: [
         {
           name: "Project Link",
@@ -330,7 +335,8 @@ const bigProjects = {
     {
       image: require("./assets/images/Untitled-design-35.png"),
       projectName: "CuddleClone",
-      projectDesc: "Logistic Retail Finance project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
+      projectDesc:
+        "Logistic Retail Finance project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
       footerLink: [
         {
           name: "Project Link",

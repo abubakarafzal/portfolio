@@ -346,7 +346,7 @@ const bigProjects = {
       ]
     },
     {
-      image: require("./assets/images/cuddleclone.png"),
+      image: require("./assets/images/CC.png"),
       projectName: "CuddleClone",
       projectDesc:
         "Logistic Retail Finance project using Java, Appium, Maven, BrowserStack, Rest Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
@@ -354,6 +354,42 @@ const bigProjects = {
         {
           name: "Visit Website",
           url: "https://www.cuddleclone.com/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/cialfo.png"),
+      projectName: "CIALFO",
+      projectDesc:
+        "Financial Services & Banking platform automation using Selenium WebDriver, Java, TestNG, Maven, Jenkins CI/CD, REST Assured API testing, Database testing with MySQL, Performance testing with JMeter, and comprehensive reporting with Extent Reports.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://www.cialfo.com/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/lqa.png"),
+      projectName: "Leading Quality",
+      projectDesc:
+        "Quality Management & Test Automation Platform using JavaScript, TypeScript, Cypress, Playwright, WebDriverIO, Mocha, Chai, Jenkins CI/CD, Docker, AWS, API testing with REST Assured, and comprehensive test reporting with Allure Reports.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://app.leadingquality.com/"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/occ.png"),
+      projectName: "OpenCascade AI Modeling",
+      projectDesc:
+        "AI/ML Modeling platform testing using Python, Pytest, Selenium, Robot Framework, TensorFlow, PyTorch, Scikit-learn, Docker containerization, Kubernetes orchestration, CI/CD with GitHub Actions, API testing with Postman, automated model validation pipelines, and AI model performance testing.",
+      footerLink: [
+        {
+          name: "Visit Website",
+          url: "https://www.opencascade.com/"
         }
       ]
     }

@@ -22,7 +22,7 @@ const greeting = {
     "SDET with 9+ years building scalable automation for Web, API, and Linux systems. Expert in TypeScript, Java, Python with Playwright, Selenium, Appium, REST Assured. CI/CD on AWS. Currently SDET (SDE II) at Amazon Web Services (AWS)."
   ),
   resumeLink:
-    "https://app.enhancv.com/share/660a8a38/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic",
+    "https://app.enhancv.com/share/eef3e876/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic",
   displayGreeting: true
 };
 

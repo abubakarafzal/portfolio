@@ -46,16 +46,18 @@ const skillsSection = {
     emoji(
       "⚡ CI/CD Integration: GitHub Actions, GitLab CI, Jenkins; Docker, Terraform; quality gates and reporting"
     ),
-    emoji("⚡ Cross-Platform Testing: Web, mobile, API; performance and reliability at scale")
+    emoji(
+      "⚡ Cross-Platform Testing: Web, mobile, API; performance and reliability at scale"
+    )
   ],
 
   softwareSkills: [
-    { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
-    { skillName: "Java", fontAwesomeClassname: "fab fa-java" },
-    { skillName: "JavaScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "TypeScript", fontAwesomeClassname: "fab fa-js" },
-    { skillName: "Docker", fontAwesomeClassname: "fab fa-docker" },
-    { skillName: "AWS", fontAwesomeClassname: "fab fa-aws" }
+    {skillName: "Python", fontAwesomeClassname: "fab fa-python"},
+    {skillName: "Java", fontAwesomeClassname: "fab fa-java"},
+    {skillName: "JavaScript", fontAwesomeClassname: "fab fa-js"},
+    {skillName: "TypeScript", fontAwesomeClassname: "fab fa-js"},
+    {skillName: "Docker", fontAwesomeClassname: "fab fa-docker"},
+    {skillName: "AWS", fontAwesomeClassname: "fab fa-aws"}
   ],
   display: true
 };
@@ -98,16 +100,18 @@ const educationInfo = {
 const techStack = {
   viewSkillBars: true,
   experience: [
-    { Stack: "Web Automation", progressPercentage: "95%" },
-    { Stack: "Mobile Automation", progressPercentage: "90%" },
-    { Stack: "API Automation", progressPercentage: "85%" }
+    {Stack: "Web Automation", progressPercentage: "95%"},
+    {Stack: "Mobile Automation", progressPercentage: "90%"},
+    {Stack: "API Automation", progressPercentage: "85%"}
   ],
   displayCodersrank: false
 };
 
 const talkSection = {
   title: "Tech Stack",
-  subtitle: emoji("I love sharing what I learn and contributing to the community."),
+  subtitle: emoji(
+    "I love sharing what I learn and contributing to the community."
+  ),
   talks: [
     {
       title: "Build Actions For Google Assistant",
@@ -138,8 +142,7 @@ const workExperiences = {
       company: "Amazon Web Services (AWS)",
       companylogo: require("./assets/images/amazon.png"),
       date: "Jun 2025 – Present",
-      desc:
-        "Automation for backend, API, and UI validation of Amazon Linux builds; AWS-native CI/CD and observability.",
+      desc: "Automation for backend, API, and UI validation of Amazon Linux builds; AWS-native CI/CD and observability.",
       descBullets: [
         "Built AWS-based CI/CD (GitHub Actions, CodeBuild, Lambda) executing large-scale test suites",
         "Raised automation coverage 70% → 95%; reduced runtime by 35%",
@@ -151,8 +154,7 @@ const workExperiences = {
       company: "Pointivo",
       companylogo: require("./assets/images/pv3.png"),
       date: "Jan 2019 – May 2025",
-      desc:
-        "Led automation across multiple B2B/B2C platforms with Playwright, Cypress, WebdriverIO.",
+      desc: "Led automation across multiple B2B/B2C platforms with Playwright, Cypress, WebdriverIO.",
       descBullets: [
         "Authored reusable TS frameworks; improved team efficiency by ~15%",
         "Regression cycle time reduced by ~50%; flakiness down substantially",
@@ -164,8 +166,7 @@ const workExperiences = {
       company: "Abraxas Informatik AG",
       companylogo: require("./assets/images/abraxas.png"),
       date: "Jun 2019 – Jun 2022",
-      desc:
-        "E2E automation with Playwright, Selenium, Appium, Cypress; compliance and release acceleration.",
+      desc: "E2E automation with Playwright, Selenium, Appium, Cypress; compliance and release acceleration.",
       descBullets: [
         "Achieved ~98% QA compliance across releases",
         "Jenkins + AWS integration improved release efficiency by ~30%",
@@ -177,8 +178,7 @@ const workExperiences = {
       company: "Kualitatem",
       companylogo: require("./assets/images/kualitatemLogo.png"),
       date: "Nov 2015 – Dec 2018",
-      desc:
-        "Selenium-based automation for enterprise web apps; CI/CD with Jenkins.",
+      desc: "Selenium-based automation for enterprise web apps; CI/CD with Jenkins.",
       descBullets: ["Reduced manual testing effort by ~40%"]
     },
     {
@@ -207,70 +207,81 @@ const bigProjects = {
       projectName: "Alexa / Alexa AI",
       projectDesc:
         "Voice skill testing, NLP pipeline validation, conversational UX testing using Python, AWS Lambda, Alexa Skills Kit.",
-      footerLink: [{ name: "Amazon Alexa AI", url: "https://developer.amazon.com/en-US/alexa" }]
+      footerLink: [
+        {
+          name: "Amazon Alexa AI",
+          url: "https://developer.amazon.com/en-US/alexa"
+        }
+      ]
     },
     {
       image: require("./assets/images/Siemens_Healthineers_logo.svg.png"),
       projectName: "Siemens Healthineers",
       projectDesc:
         "Healthcare platform QA using Cypress, Cucumber, CircleCI; Lighthouse, VMware.",
-      footerLink: [{ name: "Visit Website", url: "https://www.siemens-healthineers.com/" }]
+      footerLink: [
+        {name: "Visit Website", url: "https://www.siemens-healthineers.com/"}
+      ]
     },
     {
       image: require("./assets/images/witty.png"),
       projectName: "Witty",
       projectDesc:
         "Fintech automation with Playwright (TS), Mocha, Allure, GitHub CI, Slack reporting, Docker, Xray.",
-      footerLink: [{ name: "Visit Website", url: "https://www.w1tty.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.w1tty.com/"}]
     },
     {
       image: require("./assets/images/vertical-bridge-logo.png"),
       projectName: "Vertical Bridge",
       projectDesc:
         "Telecom & GenAI modeling QA with Python, Appium, Selenium, Bitbucket CI, Perfecto.",
-      footerLink: [{ name: "Visit Website", url: "https://www.verticalbridge.com/" }]
+      footerLink: [
+        {name: "Visit Website", url: "https://www.verticalbridge.com/"}
+      ]
     },
     {
       image: require("./assets/images/Zact_Logo.jpg"),
       projectName: "Zact",
       projectDesc:
         "Real estate & expense management: WebdriverIO, TypeScript, Mocha, Appium, SuperTest, Postman.",
-      footerLink: [{ name: "Visit Website", url: "https://www.zact.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.zact.com/"}]
     },
     {
       image: require("./assets/images/elgrocer.png"),
       projectName: "Elgrocer",
       projectDesc:
         "E-commerce: Java, Appium, Maven, BrowserStack, REST Assured, GitLab CI, Selenium, JMeter, Grafana, TestRail.",
-      footerLink: [{ name: "Visit Website", url: "https://www.elgrocer.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.elgrocer.com/"}]
     },
     {
       image: require("./assets/images/CC.png"),
       projectName: "CuddleClone",
       projectDesc:
         "Retail logistics: Playwright (TS), Docker, GitHub CI, Allure; major flakiness reduction.",
-      footerLink: [{ name: "Visit Website", url: "https://www.cuddleclone.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.cuddleclone.com/"}]
     },
     {
       image: require("./assets/images/cialfo.png"),
       projectName: "CIALFO",
       projectDesc:
         "Banking platform automation: Selenium, Java, TestNG, Maven, Jenkins; REST Assured; DB testing; JMeter; Extent Reports.",
-      footerLink: [{ name: "Visit Website", url: "https://www.cialfo.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.cialfo.com/"}]
     },
     {
       image: require("./assets/images/lqa.png"),
       projectName: "Leading Quality",
       projectDesc:
         "Quality platform: JavaScript/TypeScript, Cypress, Playwright, WebDriverIO, Mocha/Chai, Jenkins, Docker, AWS, REST.",
-      footerLink: [{ name: "Visit Website", url: "https://app.leadingquality.com/" }]
+      footerLink: [
+        {name: "Visit Website", url: "https://app.leadingquality.com/"}
+      ]
     },
     {
       image: require("./assets/images/occ.png"),
       projectName: "OpenCascade AI Modeling",
       projectDesc:
         "AI/ML testing with Python, Pytest, Robot Framework, TensorFlow, PyTorch, Docker, Kubernetes, GitHub Actions, Postman.",
-      footerLink: [{ name: "Visit Website", url: "https://www.opencascade.com/" }]
+      footerLink: [{name: "Visit Website", url: "https://www.opencascade.com/"}]
     }
   ],
   display: true
@@ -287,7 +298,7 @@ const achievementSection = {
       subtitle: "ISTQB® - International Software Testing Qualifications Board",
       image: require("./assets/images/istqbLogo.webp"),
       imageAlt: "ISTQB Certification Logo",
-      footerLink: [{ name: "Certification", url: "https://linkedin.com/" }]
+      footerLink: [{name: "Certification", url: "https://linkedin.com/"}]
     },
     {
       title: "PWA Web App Automation Certification",
@@ -295,23 +306,24 @@ const achievementSection = {
       image: require("./assets/images/pwa.png"),
       imageAlt: "PWA Logo",
       footerLink: [
-        { name: "Certification", url: "" },
-        { name: "Final Project", url: "https://pakistan-olx-1.firebaseapp.com/" }
+        {name: "Certification", url: ""},
+        {name: "Final Project", url: "https://pakistan-olx-1.firebaseapp.com/"}
       ]
     },
     {
       title: "Selenium Certification",
-      subtitle: "Certified skills in Selenium for test automation of web applications.",
+      subtitle:
+        "Certified skills in Selenium for test automation of web applications.",
       image: require("./assets/images/Selenium_Logo.png"),
       imageAlt: "Selenium Logo",
-      footerLink: [{ name: "Certification", url: "" }]
+      footerLink: [{name: "Certification", url: ""}]
     },
     {
       title: "Appium Certification",
       subtitle: "Certified expertise in Appium for mobile application testing.",
       image: require("./assets/images/appium.png"),
       imageAlt: "Appium Logo",
-      footerLink: [{ name: "Certification", url: "" }]
+      footerLink: [{name: "Certification", url: ""}]
     }
   ],
   display: true
@@ -320,21 +332,18 @@ const achievementSection = {
 // Blogs Section
 const blogSection = {
   title: "Blogs",
-  subtitle:
-    "With love for building cool stuff, I share what I learn.",
+  subtitle: "With love for building cool stuff, I share what I learn.",
   displayMediumBlogs: "true",
   blogs: [
     {
       url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
       title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Create a Google Assistant Action in less than 30 minutes."
+      description: "Create a Google Assistant Action in less than 30 minutes."
     },
     {
       url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
       title: "Why REACT is The Best?",
-      description:
-        "React for building user interfaces."
+      description: "React for building user interfaces."
     }
   ],
   display: false
@@ -349,8 +358,7 @@ const resumeSection = {
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Open to SDET / QA Automation roles (Remote EU / Germany).",
+  subtitle: "Open to SDET / QA Automation roles (Remote EU / Germany).",
   number: "+49 176 26681637",
   email_address: "bakrshk@gmail.com"
 };

@@ -1,0 +1,55 @@
+.domains__list {
+  display: grid;
+  border-top: 1px solid var(--border-faint);
+}
+
+.domain {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-5);
+  padding-block: clamp(1rem, 2.5vw, 1.6rem);
+  padding-inline: 0 clamp(0rem, 2vw, 1.5rem);
+  border-bottom: 1px solid var(--border-faint);
+  transition: padding-inline-start var(--d-base) var(--e-out);
+}
+
+/* Indent on hover — a quiet, editorial version of a hover state. */
+.domain:hover {
+  padding-inline-start: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.domain__abbr {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 5.5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  transition: color var(--d-base) var(--e-out);
+}
+
+.domain:hover .domain__abbr {
+  color: var(--fg);
+}
+
+.domain__full {
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  color: var(--fg-tertiary);
+  text-align: left;
+  transition: color var(--d-base) var(--e-out);
+}
+
+.domain:hover .domain__full {
+  color: var(--accent);
+}
+
+@media (min-width: 720px) {
+  .domain__full {
+    text-align: right;
+  }
+}

@@ -1,0 +1,103 @@
+.cta {
+  --cta-fg: var(--fg);
+  --cta-bg: transparent;
+  --cta-border: var(--border-strong);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-4);
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--cta-border);
+  border-radius: var(--r-pill);
+  background: var(--cta-bg);
+  color: var(--cta-fg);
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color var(--d-base) var(--e-out),
+    border-color var(--d-base) var(--e-out);
+}
+
+/* Wipe fill — grows from the bottom on hover rather than a colour swap. */
+.cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--cta-fill, var(--fg));
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--d-base) var(--e-out);
+}
+
+.cta:hover::before,
+.cta:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.cta--primary {
+  --cta-bg: var(--accent);
+  --cta-fg: var(--accent-ink);
+  --cta-border: var(--accent);
+  --cta-fill: var(--fg);
+}
+
+.cta--primary:hover,
+.cta--primary:focus-visible {
+  --cta-fg: var(--fg-inverse);
+  border-color: var(--fg);
+}
+
+.cta--ghost {
+  --cta-fill: var(--fg);
+}
+
+.cta--ghost:hover,
+.cta--ghost:focus-visible {
+  --cta-fg: var(--fg-inverse);
+  border-color: var(--fg);
+}
+
+/* --- Arrow travel --------------------------------------------------------- */
+.cta__arrows {
+  position: relative;
+  display: block;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  flex: none;
+}
+
+.cta__arrows svg {
+  position: absolute;
+  inset: 0;
+  transition: transform var(--d-base) var(--e-out);
+}
+
+/* Second arrow waits off-screen left and takes the first one's place. */
+.cta__arrows svg:last-child {
+  transform: translateX(-140%);
+}
+
+.cta:hover .cta__arrows svg:first-child,
+.cta:focus-visible .cta__arrows svg:first-child {
+  transform: translateX(140%);
+}
+
+.cta:hover .cta__arrows svg:last-child,
+.cta:focus-visible .cta__arrows svg:last-child {
+  transform: translateX(0);
+}
+
+@media (max-width: 400px) {
+  .cta {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.75rem;
+  }
+}

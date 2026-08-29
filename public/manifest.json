@@ -1,25 +1,22 @@
 {
-  "short_name": "Portfolio",
-  "name": "Abu bakar Afzal |SDET Portfolio",
+  "short_name": "Abu Bakar",
+  "name": "Abu Bakar Afzal — SDET Engineer",
+  "description": "Software Development Engineer in Test. Test automation, quality engineering, and AI testing.",
   "icons": [
     {
-      "src": "/cr.png",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/android-chrome-192x192.png?v8=qAJ44G5Bm7",
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
-    {
-      "src": "/android-chrome-384x384.png?v8=qAJ44G5Bm7",
-      "type": "image/png",
-      "sizes": "384x384"
-    }
+    {"src": "apple-touch-icon.png", "type": "image/png", "sizes": "180x180"}
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#6c63ff",
-  "background_color": "#ffffff"
+  "theme_color": "#080807",
+  "background_color": "#080807"
 }

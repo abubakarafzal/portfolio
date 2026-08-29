@@ -1,0 +1,130 @@
+.studies__list {
+  border-top: 1px solid var(--border-faint);
+}
+
+.study {
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.study__heading {
+  margin: 0;
+  font: inherit;
+}
+
+.study__trigger {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  width: 100%;
+  padding-block: clamp(1.25rem, 3vw, 2rem);
+  text-align: left;
+  color: var(--fg-secondary);
+  transition: color var(--d-base) var(--e-out);
+}
+
+.study__trigger:hover,
+.study__trigger:focus-visible,
+.study__trigger.is-open {
+  color: var(--fg);
+}
+
+.study__index {
+  flex: none;
+  color: var(--fg-tertiary);
+  transition: color var(--d-base) var(--e-out);
+}
+
+.study__trigger.is-open .study__index,
+.study__trigger:hover .study__index {
+  color: var(--accent);
+}
+
+.study__title {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 3.6vw, 2.6rem);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+}
+
+/* Plus → minus, drawn with two rules so there is no icon font to load. */
+.study__icon {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.study__icon span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  margin-top: -0.75px;
+  background: currentColor;
+  transition: transform var(--d-base) var(--e-out);
+}
+
+.study__icon span:last-child {
+  transform: rotate(90deg);
+}
+.study__trigger.is-open .study__icon span:last-child {
+  transform: rotate(0deg);
+}
+
+/* --- Panel ---------------------------------------------------------------- */
+.study__panel {
+  overflow: hidden;
+}
+
+.study__panel.is-open .study__panel-inner {
+  animation: study-open var(--d-base) var(--e-out);
+}
+
+.study__panel-inner {
+  display: grid;
+  gap: var(--s-5);
+  padding-bottom: clamp(1.5rem, 3vw, 2.5rem);
+  max-width: 68ch;
+}
+
+@keyframes study-open {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .study__panel.is-open .study__panel-inner {
+    animation: none;
+  }
+}
+
+.study__summary {
+  color: var(--fg-secondary);
+  font-size: var(--t-lead);
+  line-height: 1.6;
+}
+
+.study__evidence {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3) var(--s-4);
+}
+
+.study__evidence ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}

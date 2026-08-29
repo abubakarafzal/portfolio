@@ -1,0 +1,202 @@
+/* ==========================================================================
+   EXPERIENCE TIMELINE
+   ========================================================================== */
+
+.exp__list {
+  display: grid;
+}
+
+.exp__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: var(--s-5);
+  padding-block: clamp(1.75rem, 4vw, 2.75rem);
+  border-top: 1px solid var(--border-faint);
+}
+
+.exp__item:last-child {
+  border-bottom: 1px solid var(--border-faint);
+}
+
+/* --- Rail ----------------------------------------------------------------- */
+.exp__rail {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Continuous line behind the dots. */
+.exp__rail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: calc(clamp(1.75rem, 4vw, 2.75rem) * -1);
+  width: 1px;
+  background: var(--border);
+}
+
+.exp__item:last-child .exp__rail::before {
+  bottom: 0;
+}
+
+.exp__dot {
+  position: relative;
+  z-index: 1;
+  width: 9px;
+  height: 9px;
+  margin-top: 9px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  transition: background-color var(--d-base) var(--e-out),
+    border-color var(--d-base) var(--e-out);
+}
+
+.exp__item:hover .exp__dot {
+  background: var(--fg-secondary);
+  border-color: var(--fg-secondary);
+}
+
+/* The current role reads first — brighter dot, ring, and accent company name. */
+.exp__item.is-current .exp__dot {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* --- Body ----------------------------------------------------------------- */
+.exp__body {
+  display: grid;
+  gap: var(--s-4);
+  min-width: 0;
+}
+
+.exp__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s-2) var(--s-5);
+}
+
+.exp__identity {
+  min-width: 0;
+}
+
+.exp__company {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  color: var(--fg);
+}
+
+.exp__item.is-current .exp__company {
+  color: var(--accent);
+}
+
+.exp__badge {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--accent-line);
+  border-radius: var(--r-sm);
+  background: var(--accent-soft);
+  color: var(--accent);
+  letter-spacing: 0.12em;
+}
+
+.exp__role {
+  margin-top: var(--s-2);
+  color: var(--fg-secondary);
+  font-size: var(--t-body);
+}
+
+.exp__when {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  text-align: left;
+  flex: none;
+}
+
+.exp__date {
+  color: var(--fg-secondary);
+}
+.exp__location {
+  color: var(--fg-tertiary);
+}
+
+.exp__summary {
+  color: var(--fg-secondary);
+  max-width: 68ch;
+}
+
+/* --- Bullets -------------------------------------------------------------- */
+.exp__bullets {
+  display: grid;
+  gap: var(--s-2);
+  max-width: 72ch;
+}
+
+.exp__bullets li {
+  position: relative;
+  padding-left: var(--s-5);
+  color: var(--fg-secondary);
+  font-size: var(--t-small);
+  line-height: 1.65;
+}
+
+.exp__bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 1px;
+  background: var(--border-strong);
+}
+
+.exp__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+/* --- Watermark logo ------------------------------------------------------- */
+.exp__logo {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 96px;
+  max-height: 52px;
+  object-fit: contain;
+  object-position: right center;
+  transform: translateY(-50%);
+  filter: grayscale(1) brightness(2);
+  opacity: 0.18;
+  pointer-events: none;
+  transition: opacity var(--d-base) var(--e-out);
+}
+
+.exp__item:hover .exp__logo {
+  opacity: 0.4;
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+@media (min-width: 820px) {
+  .exp__item {
+    grid-template-columns: 20px 1fr;
+    padding-right: 140px;
+  }
+  .exp__logo {
+    display: block;
+  }
+  .exp__head {
+    flex-wrap: nowrap;
+  }
+  .exp__when {
+    text-align: right;
+    align-items: flex-end;
+  }
+}

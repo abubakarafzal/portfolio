@@ -1,0 +1,76 @@
+.flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 1px;
+  background: var(--border-faint);
+  border: 1px solid var(--border-faint);
+}
+
+.flow__step {
+  position: relative;
+  display: grid;
+  gap: var(--s-3);
+  align-content: start;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
+  background: var(--bg);
+  transition: background-color var(--d-base) var(--e-out);
+}
+
+.flow__step:hover {
+  background: var(--bg-raised);
+}
+
+.flow__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+}
+
+.flow__index {
+  color: var(--fg-tertiary);
+  transition: color var(--d-base) var(--e-out);
+}
+
+.flow__step:hover .flow__index {
+  color: var(--accent);
+}
+
+.flow__name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+.flow__note {
+  color: var(--fg-secondary);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+/* Chevron linking each step to the next. Hidden on the last item and whenever
+   the grid wraps to a single column, where it would point at nothing. */
+.flow__connector {
+  position: absolute;
+  top: 50%;
+  right: -1px;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid var(--border-strong);
+  border-right: 1px solid var(--border-strong);
+  transform: translate(50%, -50%) rotate(45deg);
+  background: var(--bg);
+  display: none;
+}
+
+/* Only shown once the grid has more than one column, and never on the final
+   step, where it would point at nothing. */
+@media (min-width: 640px) {
+  .flow__step:not(:last-child) .flow__connector {
+    display: block;
+  }
+}

@@ -1,0 +1,274 @@
+/* ==========================================================================
+   SELECTED WORK
+   ========================================================================== */
+
+.work__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.work__item {
+  display: flex;
+}
+
+/* --- Card ----------------------------------------------------------------- */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--bg-raised);
+  overflow: hidden;
+  isolation: isolate;
+  transition: transform var(--d-base) var(--e-out),
+    border-color var(--d-base) var(--e-out),
+    background-color var(--d-base) var(--e-out);
+}
+
+.card:hover,
+.card:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+  background: var(--bg-raised-2);
+}
+
+/* --- Visual --------------------------------------------------------------- */
+.card__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  padding: clamp(2rem, 6vw, 3.5rem);
+  background: radial-gradient(
+      120% 100% at 50% 0%,
+      rgba(242, 239, 233, 0.05) 0%,
+      transparent 65%
+    ),
+    var(--bg-raised-2);
+  border-bottom: 1px solid var(--border-faint);
+  overflow: hidden;
+}
+
+.card__index {
+  position: absolute;
+  top: var(--s-5);
+  left: var(--s-5);
+  color: var(--fg-tertiary);
+}
+
+.card__logo {
+  max-width: min(58%, 240px);
+  max-height: 68px;
+  width: auto;
+  object-fit: contain;
+  /* Neutralises a dozen different brand palettes into one calm system. */
+  filter: grayscale(1) brightness(1.9) contrast(0.85);
+  opacity: 0.72;
+  transition: transform var(--d-slow) var(--e-out),
+    opacity var(--d-base) var(--e-out), filter var(--d-base) var(--e-out);
+}
+
+.card:hover .card__logo,
+.card:focus-visible .card__logo {
+  transform: scale(1.06);
+  opacity: 1;
+  filter: grayscale(0) brightness(1.05) contrast(1);
+}
+
+/* Typographic fallback when a logo file is not present. */
+.card__wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  color: var(--fg-tertiary);
+  text-align: center;
+  transition: color var(--d-base) var(--e-out);
+}
+
+.card:hover .card__wordmark {
+  color: var(--fg-secondary);
+}
+
+/* Diagonal light sweep on hover. */
+.card__sheen {
+  position: absolute;
+  inset: -50%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(242, 239, 233, 0.07) 50%,
+    transparent 58%
+  );
+  transform: translateX(-60%);
+  opacity: 0;
+  transition: transform var(--d-reveal) var(--e-out),
+    opacity var(--d-base) var(--e-out);
+  pointer-events: none;
+}
+
+.card:hover .card__sheen {
+  transform: translateX(60%);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card__sheen {
+    display: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+  .card:hover .card__logo {
+    transform: none;
+  }
+}
+
+/* --- Body ----------------------------------------------------------------- */
+.card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  flex: 1;
+}
+
+.card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-4);
+}
+
+.card__name {
+  color: var(--fg);
+  transition: color var(--d-fast) var(--e-out);
+}
+
+.card:hover .card__name {
+  color: var(--accent);
+}
+
+.card__arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--fg-secondary);
+  transition: transform var(--d-base) var(--e-out),
+    background-color var(--d-base) var(--e-out),
+    border-color var(--d-base) var(--e-out), color var(--d-base) var(--e-out);
+}
+
+.card:hover .card__arrow,
+.card:focus-visible .card__arrow {
+  transform: translate(3px, -3px);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.card__category {
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.card__desc {
+  color: var(--fg-secondary);
+  font-size: var(--t-body);
+  line-height: 1.6;
+}
+
+/* --- Metadata: revealed on hover, always available to screen readers ------- */
+.card__meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--s-2) var(--s-4);
+  align-items: baseline;
+  margin: 0;
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--border-faint);
+  font-size: var(--t-small);
+  color: var(--fg-secondary);
+}
+
+.card__meta dt {
+  color: var(--fg-tertiary);
+}
+.card__meta dd {
+  margin: 0;
+}
+
+/* --- Stack chips ---------------------------------------------------------- */
+.card__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: auto;
+  padding-top: var(--s-4);
+}
+
+.chip {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-tertiary);
+  white-space: nowrap;
+  transition: border-color var(--d-base) var(--e-out),
+    color var(--d-base) var(--e-out);
+}
+
+.card:hover .chip {
+  border-color: var(--border-strong);
+  color: var(--fg-secondary);
+}
+
+/* --- Breakpoints ---------------------------------------------------------- */
+@media (min-width: 760px) {
+  .work__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* First two cards run full width for an editorial rhythm. */
+  .work__item:nth-child(-n + 2) {
+    grid-column: 1 / -1;
+  }
+  .work__item:nth-child(-n + 2) .card {
+    flex-direction: row;
+  }
+  .work__item:nth-child(-n + 2) .card__visual {
+    flex: 1 1 46%;
+    aspect-ratio: auto;
+    border-bottom: 0;
+    border-right: 1px solid var(--border-faint);
+  }
+  .work__item:nth-child(-n + 2) .card__body {
+    flex: 1 1 54%;
+  }
+  .work__item:nth-child(2) .card {
+    flex-direction: row-reverse;
+  }
+  .work__item:nth-child(2) .card__visual {
+    border-right: 0;
+    border-left: 1px solid var(--border-faint);
+  }
+}
+
+@media (min-width: 1180px) {
+  .work__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .work__item:nth-child(-n + 2) {
+    grid-column: span 3;
+  }
+}

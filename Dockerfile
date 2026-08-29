@@ -1,29 +1,17 @@
-# This file is the main docker file configurations
+# Local development container. Production is a static build deployed to
+# GitHub Pages by .github/workflows/deploy.yml — this image is only for
+# running the dev server in a reproducible environment.
 
-# Official Node JS runtime as a parent image
-FROM node:10.16.0-alpine
+FROM node:20-alpine
 
-# Set the working directory to ./app
 WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package.json ./
+# Copy the manifests first so the dependency layer is cached independently
+# of the source, and install from the lockfile for a reproducible tree.
+COPY package.json package-lock.json ./
+RUN npm ci
 
-RUN apk add --no-cache git
+COPY . .
 
-# Install any needed packages
-RUN npm install
-
-# Audit fix npm packages
-RUN npm audit fix
-
-# Bundle app source
-COPY . /app
-
-# Make port 3000 available to the world outside this container
 EXPOSE 3000
-
-# Run app.js when the container launches
 CMD ["npm", "start"]

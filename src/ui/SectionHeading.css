@@ -1,0 +1,44 @@
+.sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.sec-head__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.sec-head__index {
+  color: var(--accent);
+}
+
+.sec-head__index::after {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 1px;
+  margin-left: var(--s-4);
+  vertical-align: middle;
+  background: var(--border-strong);
+}
+
+.sec-head__title {
+  color: var(--fg);
+  max-width: 18ch;
+}
+
+.sec-head__lead {
+  margin-top: calc(var(--s-2) * -1);
+}
+
+.sec-head--center {
+  align-items: center;
+  text-align: center;
+}
+
+.sec-head--center .sec-head__title {
+  max-width: 22ch;
+}

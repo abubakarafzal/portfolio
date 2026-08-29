@@ -12,6 +12,9 @@
 
 # misc
 .DS_Store
+
+# local secrets — .env holds a GitHub token, never commit it
+.env
 .env.local
 .env.development.local
 .env.test.local

@@ -1,0 +1,314 @@
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color var(--d-base) var(--e-out),
+    border-color var(--d-base) var(--e-out),
+    backdrop-filter var(--d-base) var(--e-out);
+}
+
+.nav.is-scrolled {
+  background: rgba(8, 8, 7, 0.72);
+  border-bottom-color: var(--border-faint);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  backdrop-filter: blur(14px) saturate(140%);
+}
+
+/* Older Safari/Firefox without backdrop-filter get a solid bar instead of a
+   transparent one, so contrast never drops below AA. */
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .nav.is-scrolled {
+    background: rgba(8, 8, 7, 0.96);
+  }
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  width: 100%;
+}
+
+/* --- Brand ---------------------------------------------------------------- */
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex: none;
+}
+
+.nav__mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-sm);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: background-color var(--d-base) var(--e-out),
+    color var(--d-base) var(--e-out), border-color var(--d-base) var(--e-out);
+}
+
+.nav__brand:hover .nav__mark {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.nav__name {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+
+/* --- Desktop links -------------------------------------------------------- */
+.nav__links {
+  display: none;
+  align-items: center;
+  gap: clamp(0.5rem, 1.6vw, 1.5rem);
+}
+
+.nav__link {
+  position: relative;
+  padding: 0.4rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  transition: color var(--d-fast) var(--e-out);
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform var(--d-base) var(--e-out);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--fg);
+}
+
+.nav__link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav__link.is-active {
+  color: var(--fg);
+}
+
+.nav__link.is-active::after {
+  background: var(--accent);
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- End cluster ---------------------------------------------------------- */
+.nav__end {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  flex: none;
+}
+
+.nav__resume {
+  display: none;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--r-pill);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  transition: background-color var(--d-base) var(--e-out),
+    color var(--d-base) var(--e-out), border-color var(--d-base) var(--e-out);
+}
+
+.nav__resume:hover,
+.nav__resume:focus-visible {
+  background: var(--fg);
+  border-color: var(--fg);
+  color: var(--fg-inverse);
+}
+
+/* --- Hamburger ------------------------------------------------------------ */
+.nav__toggle {
+  position: relative;
+  display: grid;
+  place-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  margin-right: -8px;
+  border-radius: var(--r-sm);
+}
+
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--fg);
+  transition: transform var(--d-base) var(--e-out);
+}
+
+.nav__toggle.is-open span:first-child {
+  transform: translateY(3.75px) rotate(45deg);
+}
+
+.nav__toggle.is-open span:last-child {
+  transform: translateY(-3.75px) rotate(-45deg);
+}
+
+/* ==========================================================================
+   FULL-SCREEN MOBILE MENU
+   ========================================================================== */
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-menu);
+  /* Closed by default. The `hidden` attribute alone is not enough — a UA
+     `[hidden]{display:none}` rule loses to any author `display` declaration —
+     so visibility is driven by `.is-open` and `hidden` is left to carry the
+     accessibility semantics. */
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-block: calc(var(--nav-h) + var(--s-7)) var(--s-7);
+  background: var(--bg);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  margin-block: auto;
+}
+
+.menu__link {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-4);
+  padding-block: clamp(0.5rem, 2vw, 0.9rem);
+  border-bottom: 1px solid var(--border-faint);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: menu-in var(--d-base) var(--e-out) forwards;
+  animation-delay: calc(60ms + var(--i) * 45ms);
+}
+
+.menu__index {
+  color: var(--fg-tertiary);
+  flex: none;
+}
+
+.menu__label {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 10vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: var(--ls-display);
+  text-transform: uppercase;
+  transition: color var(--d-fast) var(--e-out);
+}
+
+.menu__link:hover .menu__label,
+.menu__link:focus-visible .menu__label {
+  color: var(--accent);
+}
+
+.menu__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  font-family: var(--font-mono);
+  font-size: var(--t-small);
+  color: var(--fg-secondary);
+}
+
+.menu__social {
+  display: flex;
+  gap: var(--s-5);
+}
+
+.menu__foot a:hover,
+.menu__foot a:focus-visible {
+  color: var(--fg);
+}
+
+.menu.is-open {
+  display: flex;
+}
+
+@keyframes menu-in {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu__link {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ==========================================================================
+   BREAKPOINTS
+   ========================================================================== */
+
+@media (min-width: 900px) {
+  .nav__links {
+    display: flex;
+  }
+  .nav__resume {
+    display: inline-block;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  /* Both selectors, so an open menu cannot survive a resize to desktop. */
+  .menu,
+  .menu.is-open {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav__name {
+    display: none;
+  }
+}

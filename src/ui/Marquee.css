@@ -1,0 +1,96 @@
+.marquee {
+  --marquee-fade: clamp(3rem, 10vw, 10rem);
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(1.5rem, 3vw, 2.5rem);
+  border-block: 1px solid var(--border-faint);
+  /* Soften both ends so items enter and leave instead of popping. */
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 var(--marquee-fade),
+    #000 calc(100% - var(--marquee-fade)),
+    transparent
+  );
+}
+
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll var(--marquee-duration) linear infinite;
+}
+
+.marquee--reverse .marquee__track {
+  animation-direction: reverse;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+.marquee__row {
+  display: flex;
+  align-items: center;
+  flex: none;
+}
+
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  padding-inline-end: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.marquee__text {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 3.2vw, 2.75rem);
+  line-height: 1;
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--fg-secondary);
+  white-space: nowrap;
+  transition: color var(--d-base) var(--e-out);
+}
+
+.marquee:hover .marquee__text {
+  color: var(--fg);
+}
+
+.marquee__dot {
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.65;
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track {
+    animation: none;
+    /* Static, still legible, and no longer wider than the viewport. */
+    transform: none;
+  }
+  .marquee {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}

@@ -1,0 +1,54 @@
+.cursor {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-cursor);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--d-base) var(--e-out);
+}
+
+body.has-cursor .cursor {
+  opacity: 1;
+}
+
+.cursor__dot,
+.cursor__ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  will-change: transform;
+}
+
+.cursor__dot {
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  background: var(--accent);
+}
+
+.cursor__ring {
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  border: 1px solid var(--border-strong);
+  transition: width var(--d-base) var(--e-spring),
+    height var(--d-base) var(--e-spring), margin var(--d-base) var(--e-spring),
+    border-color var(--d-base) var(--e-out),
+    background-color var(--d-base) var(--e-out);
+}
+
+.cursor__ring.is-active {
+  width: 56px;
+  height: 56px;
+  margin: -28px 0 0 -28px;
+  border-color: var(--accent-line);
+  background: var(--accent-soft);
+}
+
+/* Never render on coarse pointers or for reduced-motion users. */
+@media (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .cursor {
+    display: none;
+  }
+}
